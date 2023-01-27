@@ -20,7 +20,7 @@ public class Reto_01_Anagrama {
     public static void main(String args[])
     {
         String word1 ="matematicamente1",
-               word2 = "mentematicamate";
+               word2 = "1matematicamente";
         if (ft_anagrama(word1, word2)) {
             System.out.println(word1 + " y " + word2 + " son anagramas");
         } else {
