@@ -1,6 +1,6 @@
 package com.retosProgramacion;
 
-public class Reto_05_Area_poligono {
+public class Reto_04_Area_poligono {
 
     /*
      * Crea una única función (importante que sólo sea una) que sea capaz
