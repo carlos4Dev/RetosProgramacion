@@ -1,4 +1,4 @@
-package com.retosProgramacion;
+package com.retosProgramacion2022_00_10;
 
 public class Reto_02_Fibonacci {
 

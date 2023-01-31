@@ -1,4 +1,4 @@
-package com.retosProgramacion.reto_04_Area_Poligono;
+package com.retosProgramacion2022_00_10.reto_04_Area_Poligono;
 
 public class Cuadrado implements Poligono {
 
