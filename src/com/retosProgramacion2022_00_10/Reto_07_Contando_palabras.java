@@ -19,12 +19,9 @@ public class Reto_07_Contando_palabras {
 
         String textoOriginal = "Lorem? impsum- armet; amet, LORem. lorem!";
         String texto = textoOriginal.toLowerCase(Locale.ROOT);
+        String regEx = "[\\[|\\]]|[.,;:)(?¡¿!-]|[\\\\]";
 
-        // c
-
-//        texto = texto.replaceAll("[\\.\\,\\(\\),\\!,\\?,\\:]",
-//                "");
-        texto = texto.replaceAll("[\\[|\\]]|[.,;:)(?¡¿!-]|[\\\\]", "");
+        texto = texto.replaceAll(regEx, "");
         String[] palabras = texto.split(" ");
 
         // Mapa en donde almacenamos la frecuencia.
@@ -44,6 +41,5 @@ public class Reto_07_Contando_palabras {
         }
 
     }
-
-
+    
 }
