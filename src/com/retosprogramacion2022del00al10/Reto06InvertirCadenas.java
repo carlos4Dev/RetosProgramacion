@@ -13,24 +13,26 @@ public class Reto06InvertirCadenas {
 
     public static void main (String args[]) {
 
-        String name = "Hola Mundo";
-        ArrayList<Character> alreves = new ArrayList<Character>();
-        int lastPosition = name.length() - 1;
+        String texto = "Hola Mundo";
 
-        for (int i = lastPosition; i >= 0; i--){
-            alreves.add(name.charAt(i));
+        System.out.println(stringReverseOrder(texto));
+
+    }
+
+    public static String stringReverseOrder(String text) {
+
+        ArrayList<Character> alreves = new ArrayList<Character>();
+        int lastPosition = text.length() - 1;
+
+        for (int i = lastPosition; i >= 0; i--) {
+            alreves.add(text.charAt(i));
         }
-        /*
-        for(int i = 0; i < alreves.size(); i++) {
-            System.out.print(alreves.get(i));
-        }
-        */
+
         String str = alreves.stream()
-                .map(e->e.toString())
+                .map(e -> e.toString())
                 .collect(Collectors.joining());
 
-        System.out.println(str);
-
+        return str;
     }
 
 }
