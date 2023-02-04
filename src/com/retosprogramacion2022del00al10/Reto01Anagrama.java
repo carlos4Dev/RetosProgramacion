@@ -1,9 +1,9 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Reto_01_Anagrama {
+public class Reto01Anagrama {
     /*
     Reto #1
     ¿ES UN ANAGRAMA?

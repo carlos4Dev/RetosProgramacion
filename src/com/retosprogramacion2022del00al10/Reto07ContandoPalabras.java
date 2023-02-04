@@ -1,10 +1,9 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class Reto_07_Contando_palabras {
+public class Reto07ContandoPalabras {
 
     /*
      * Crea un programa que cuente cuantas veces se repite cada palabra
@@ -41,5 +40,5 @@ public class Reto_07_Contando_palabras {
         }
 
     }
-    
+
 }

@@ -1,9 +1,9 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class Reto_06_Invertir_cadenas {
+public class Reto06InvertirCadenas {
 
     /*
      * Crea un programa que invierta el orden de una cadena de texto

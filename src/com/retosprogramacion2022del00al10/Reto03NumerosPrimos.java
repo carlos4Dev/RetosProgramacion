@@ -1,6 +1,6 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
-public class Reto_03_NumerosPrimos {
+public class Reto03NumerosPrimos {
 
     /*
      * Escribe un programa que se encargue de comprobar si un número es o no primo.

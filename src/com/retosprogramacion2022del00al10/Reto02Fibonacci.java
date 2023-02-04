@@ -1,6 +1,6 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
-public class Reto_02_Fibonacci {
+public class Reto02Fibonacci {
 
     /*
      * Escribe un programa que imprima los 50 primeros números de la sucesión

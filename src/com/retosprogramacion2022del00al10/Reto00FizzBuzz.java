@@ -1,6 +1,6 @@
-package com.retosProgramacion2022_00_10;
+package com.retosprogramacion2022del00al10;
 
-public class Reto_00_FizzBuzz {
+public class Reto00FizzBuzz {
     /*
     * Reto #0
     * EL FAMOSO "FIZZ BUZZ"

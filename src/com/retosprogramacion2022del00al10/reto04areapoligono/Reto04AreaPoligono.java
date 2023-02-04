@@ -1,6 +1,6 @@
-package com.retosProgramacion2022_00_10.reto_04_Area_Poligono;
+package com.retosprogramacion2022del00al10.reto04areapoligono;
 
-public class Reto_04_Area_poligono {
+public class Reto04AreaPoligono {
 
     /*
      * Crea una única función (importante que sólo sea una) que sea capaz

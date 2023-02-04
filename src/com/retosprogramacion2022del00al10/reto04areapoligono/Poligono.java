@@ -1,4 +1,4 @@
-package com.retosProgramacion2022_00_10.reto_04_Area_Poligono;
+package com.retosprogramacion2022del00al10.reto04areapoligono;
 
 public interface Poligono {
 
