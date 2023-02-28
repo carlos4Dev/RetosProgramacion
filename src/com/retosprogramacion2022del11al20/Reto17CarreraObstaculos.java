@@ -21,17 +21,44 @@ public class Reto17CarreraObstaculos {
 
     public static void main (String[] args) {
 
-        String[] steps = {"_", "_", "|", "_", "|", "_"};
+        String[] steps = {"run", "run", "jump", "run", "run", "run"};
         String race ="__|_|_";
 
-        System.out.println("The athlete win the race is " +
-                isGoodRace(steps, race));
+        System.out.println("Race 1 = " + race);
+
+        if (isGoodRace(steps, race)) {
+            System.out.println("Good, you've won the race");
+        } else {
+            System.out.println("Ooohhh, you've lost the race");
+        }
 
     }
 
     public static boolean isGoodRace (String[] steps, String race) {
-        boolean goodRace = false;
+        boolean goodRace;
+        int num = steps.length;
+        StringBuilder realRace = new StringBuilder();
+        for (int i = 0; i < num; i++) {
+            boolean goodRun = String.valueOf(race.charAt(i)).equals("_");
+            if(goodRun && steps[i].equals("run")) {
+                realRace.append("_");
+            } else if(goodRun && steps[i].equals("jump")) {
+                realRace.append("x");
+            } else {
+                boolean goodJump = String.valueOf(race.charAt(i)).equals("|");
+                if(goodJump && steps[i].equals("jump")) {
+                    realRace.append("|");
+                } else if(goodJump && steps[i].equals("run")) {
+                    realRace.append("/");
+                }
+            }
+        }
 
+        String finalRace = realRace.toString();
+
+        System.out.println("Race 2 = " + finalRace);
+
+        goodRace = finalRace.equals(race);
 
         return goodRace;
     }
