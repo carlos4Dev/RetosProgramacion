@@ -1,5 +1,13 @@
 package com.retosprogramacion2022del21al30;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
 public class Reto21CalculadoraTxt {
 
     /*
@@ -18,14 +26,85 @@ public class Reto21CalculadoraTxt {
      */
     public static void main (String[] args) {
 
-        String file = "path";
-        System.out.println(calculate(file));
 
-    }
+        String nombreArchivo = "/Users/mac/RetosProgramacion/src/com" +
+                "/retosprogramacion2022del21al30/calculadora.txt";
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(nombreArchivo);
+            bufferedReader = new BufferedReader(fileReader);
+            StringBuilder stringBuilder = new StringBuilder("");
+            String linea;
+            while ((linea = bufferedReader.readLine()) != null) {
+                // Lee línea por línea, omitiendo los saltos de línea
+                // stringBuilder.append(linea).append("\n");
+                stringBuilder.append(linea);
+            }
 
-    public static String calculate(String file) {
+            String content = stringBuilder.toString();
+            System.out.println(content);
 
-        return file;
+
+            if (!Character.isDigit(content.charAt(0)) ||
+                !Character.isDigit(content.charAt(content.length() - 1))) {
+                System.out.println("Format error");
+            }
+
+            int i = 0;
+            int num1 = 0;
+            int num2 = 0;
+            int result = 0;
+            StringBuilder first = new StringBuilder("");
+            StringBuilder second = new StringBuilder("");
+            String operator ="";
+
+            while (i < content.length()) {
+                if (Character.isDigit(content.charAt(i))) {
+                    first.append(String.valueOf(content.charAt(i)));
+                    num1 = Integer.parseInt(first.toString());
+                    i++;
+                } else {
+                    operator = String.valueOf(content.charAt(i));
+                    i++;
+                    if (Character.isDigit(content.charAt(i))) {
+                        second.append(String.valueOf(content.charAt(i)));
+                        num2 = Integer.parseInt(second.toString());
+                        i++;
+                    } else {
+                        if (operator.equals("+")) {
+                            result = num1 + num2;
+                            i++;
+                            System.out.println("Result = " + result);
+                        } else if (operator.equals("-")) {
+                            result = num1 - num2;
+                            System.out.println("Result " + (i + 1) + " = " + result);
+                        } else if (operator.equals("*")) {
+                            result = num1 * num2;
+                            System.out.println("Result " + (i + 1) + " = " + result);
+                        } else if (operator.equals("/")) {
+                            result = num1 / num2;
+                            System.out.println("Result " + (i + 1) + " = " + result);
+                        }
+                    }
+                }i++;
+            }
+            System.out.println("El resultado es " + result);
+
+        } catch (IOException e) {
+            System.out.println("Excepción leyendo archivo: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fileReader != null)
+                    fileReader.close();
+                if (bufferedReader != null)
+                    bufferedReader.close();
+            } catch (IOException e) {
+                System.out.println("Excepción cerrando: " + e.getMessage());
+            }
+        }
 
     }
 
